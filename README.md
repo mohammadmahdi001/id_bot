@@ -1,6 +1,5 @@
 #id_mmf_robot
 
-<b>license MIT</b>
 
 #Setup
 
