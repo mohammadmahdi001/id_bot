@@ -23,7 +23,7 @@ def welcome(m):
     markup.add(b)
     nn = types.InlineKeyboardButton("Inline Mode", switch_inline_query='')
     markup.add(nn)
-    ret_msg = bot.send_message(cid, "Hello I'm ID bot \n\n Send : \n  /id or /me or /info   \n\n\n get your id : \n /idme (just pv) \nsend Your feedback : /feedback [msg]\n\n\n list inline mod : \ntype @ID_mmf_robot\n\nBot version 3", disable_notification=True, reply_markup=markup)
+    ret_msg = bot.send_message(cid, "Hello I'm ID mmf bot \n\n Send : \n  /id or /me or /info   \n\n\n get your id : \n /idme (just pv) \nsend Your feedback : /feedback [msg]\n\n\n list inline mod : \ntype @ID_mmf_robot\n\nBot version 3", disable_notification=True, reply_markup=markup)
     assert ret_msg.message_id
 
 @bot.message_handler(commands=['id', 'ids', 'info', 'me'])
@@ -39,7 +39,7 @@ def id(m):      # info menu
     p = m.pinned_message
     fromm = m.forward_from
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton("\xF0\x9F\x98\x8A Taylor Team \xF0\x9F\x98\x8A", url="https://telegram.me/mmf_channel"))
+    markup.add(types.InlineKeyboardButton("\xF0\x9F\x98\x8A mmf_channel \xF0\x9F\x98\x8A", url="https://telegram.me/mmf_channel"))
 #info text
     bot.send_chat_action(cid, "typing")
     bot.reply_to(m, "*ID from* : ```{}``` \n\n *Chat name* : ```{}``` \n\n\n *Your Username* : ```{}``` \n\n *Your First Name* : ```{}```\n\n *Your Last Name* : ```{}```\n\n *Type From* : ```{}``` \n\n *Msg data* : ```{}```\n\n *Your Msg* : ```{}```\n\n* pind msg * : ```{}```\n\n *from* : ```{}```".format(cid,title,usr,f,l,t,d,text,p,fromm), parse_mode="Markdown", reply_markup=markup)
